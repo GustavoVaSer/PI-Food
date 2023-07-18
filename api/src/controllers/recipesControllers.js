@@ -3,12 +3,15 @@ const axios = require("axios");
 const { Recipe, Diets } = require("../db.js");
 const { API_KEY } = process.env;
 
-const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`;
+const url = `http://localhost:8080/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`;
+// const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`;
+
+const mock = "https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5";
 
 // GET RECIPE BY API ---------------
 
 const getRecipesByApi = async () => {
-  const apiUrl = await axios.get(url);
+  const apiUrl = await axios.get(mock);
   const apiInfo = await apiUrl.data.results?.map((data) => {
     return {
       id: data.id,
