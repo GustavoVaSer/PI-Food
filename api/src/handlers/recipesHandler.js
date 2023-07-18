@@ -27,7 +27,7 @@ const getAllRecipesHandler = async (req, res) => {
   }
 };
 
-// GET RECIPIES BY ID HANDLER ---------------------
+// GET RECIPES BY ID HANDLER ---------------------
 
 const getRecipesByIdHandler = async (req, res) => {
   // maneja la solicitud para obtener una receta por su ID
@@ -38,4 +38,34 @@ const getRecipesByIdHandler = async (req, res) => {
   } catch (err) {
     res.status(400).json({ message: err });
   }
+};
+
+// POST RECIPES DATA ---------------------------
+
+const postRecipesHandler = async (req, res) => {
+  // maneja la solicitud para crear una nueva receta
+  const { name, summary, healthscore, image, steps, diets } = req.body;
+  try {
+    const post = await Recipe.create({
+      //metodo create de Sequelize para crear una nueva instancia de Recipe
+      name,
+      summary,
+      healthscore,
+      image,
+      steps,
+    }); // Asociatting data
+    diets?.map(async (e) => {
+      let dietDb = await Diets.findOne({ where: { name: e } });
+      await post.addDiets(dietDb);
+    });
+    res.status(201).json(post);
+  } catch (err) {
+    res.status(400).json({ message: err });
+  }
+};
+
+module.exports = {
+  getAllRecipesHandler,
+  getRecipesByIdHandler,
+  postRecipesHandler,
 };
