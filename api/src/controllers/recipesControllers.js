@@ -80,8 +80,18 @@ const getRecipesById = async (id) => {
   return await Recipe.findByPk(id);
 };
 
+// GET BOTH RECIPES FROM API & DB
+
+const getAllRecipes = async () => {
+  const getByApi = await getRecipesByApi();
+  const getByDb = await getRecipesByDb();
+  const allRecipes = getByDb.concat(getByApi);
+  return allRecipes;
+};
+
 module.exports = {
   getRecipesByApi,
   getRecipesByDb,
   getRecipesById,
+  getAllRecipes,
 };
