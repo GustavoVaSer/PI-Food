@@ -35,13 +35,9 @@ let capsEntries = entries.map((entry) => [
 ]);
 sequelize.models = Object.fromEntries(capsEntries);
 
-// Al importarlos de esa manera, se obtiene la función del modelo, que luego se ejecuta pasando la conexión sequelize como argumento.
-
-// DietModel(sequelize);
-// RecipeModel(sequelize);
-
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
+
 const { Recipe, Diets } = sequelize.models;
 
 // Aca vendrian las relaciones
