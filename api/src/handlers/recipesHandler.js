@@ -26,3 +26,16 @@ const getAllRecipesHandler = async (req, res) => {
     res.status(400).json({ message: err });
   }
 };
+
+// GET RECIPIES BY ID HANDLER ---------------------
+
+const getRecipesByIdHandler = async (req, res) => {
+  // maneja la solicitud para obtener una receta por su ID
+  const { id } = req.params;
+  try {
+    const getId = await getRecipesById(id);
+    res.status(200).json(getId);
+  } catch (err) {
+    res.status(400).json({ message: err });
+  }
+};
