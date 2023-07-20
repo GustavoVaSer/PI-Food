@@ -34,7 +34,7 @@ function Detail() {
             <img src={selector.image} alt={selector.name} width='300px' height='200px' />
           </div> 
           <div className={style.divImgToHome}>
-            <Link to='/home'><img src={takeHome} alt="Home button" height='200px' width='250px' /></Link>
+            <Link to='/home'><img alt="Home button" height='200px' width='250px' /></Link>
           </div>
         </div>
       ) : null}
