@@ -1,7 +1,7 @@
 import style from './navBar.module.css'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { getRecipesByName } from '../../redux/actions'
+import { getRecipeByName } from '../../redux/actions'
 import { Link } from 'react-router-dom'
 
 function NavBar() {
@@ -17,7 +17,7 @@ function NavBar() {
     }
     
     const onSearch = () =>{
-      dispatch(getRecipesByName(recipeName.recipeValue))
+      dispatch(getRecipeByName(recipeName.recipeValue))
     }
     
       return (
