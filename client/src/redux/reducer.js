@@ -41,5 +41,17 @@ const reducer = (state = initialState, action) => {
         ...state,
         filteredRecipes: action.payload,
       };
+    case CREATE_RECIPE:
+      return {
+        ...state,
+        recipes: [...state.recipes, action.payload], // Agregar la nueva receta al array de recetas
+      };
+    case ORDER:
+      return {
+        ...state,
+        recipes: state.filteredRecipes.sort((a, b) =>
+          a.name.localeCompare(b.name)
+        ),
+      };
   }
 };
