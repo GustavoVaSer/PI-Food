@@ -53,5 +53,21 @@ const reducer = (state = initialState, action) => {
           a.name.localeCompare(b.name)
         ),
       };
+    case ORDER_DESC:
+      return {
+        ...state,
+        recipes: state.filteredRecipes.sort((a, b) =>
+          b.name.localeCompare(a.name)
+        ),
+      };
+    case GET_BY_API:
+      // la acción trae un arreglo de recetas de la API en action.payload
+      const apiRecipes = action.payload;
+      // Combina las recetas de la API con las recetas actuales del estado
+      const combinedRecipes = [...state.recipes, ...apiRecipes];
+      return {
+        ...state,
+        recipes: combinedRecipes, // Actualiza las recetas con las combinadas
+      };
   }
 };
