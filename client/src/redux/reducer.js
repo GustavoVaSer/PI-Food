@@ -69,5 +69,29 @@ const reducer = (state = initialState, action) => {
         ...state,
         recipes: combinedRecipes, // Actualiza las recetas con las combinadas
       };
+    case HS_ASC:
+      return {
+        ...state,
+        recipes: state.filteredRecipes.sort(
+          (a, b) => b.healthscore - a.healthscore //recetas se muestren de manera ascendente según su puntaje de salud
+        ),
+      };
+    case HS_DESC:
+      return {
+        ...state,
+        recipes: state.filteredRecipes.sort(
+          (a, b) => a.healthscore - b.healthscore
+        ),
+      };
+    case RESET:
+      return {
+        ...state,
+        recipes: state.filteredRecipes,
+      };
+
+    default:
+      return { ...state };
   }
 };
+
+export default reducer;
