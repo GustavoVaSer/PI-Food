@@ -18,3 +18,18 @@ const initialState = {
   diets: [],
   filteredRecipes: [],
 };
+
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case GET_RECIPES:
+      return {
+        ...state,
+        recipes: action.payload,
+      };
+    case GET_RECIPE_DETAIL:
+      return {
+        ...state,
+        recipeDetail: action.payload,
+      };
+  }
+};
