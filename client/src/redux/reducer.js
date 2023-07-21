@@ -31,5 +31,15 @@ const reducer = (state = initialState, action) => {
         ...state,
         recipeDetail: action.payload,
       };
+    case GET_DIETS:
+      return {
+        ...state,
+        diets: action.payload,
+      };
+    case GET_RECIPES_BY_NAME:
+      return {
+        ...state,
+        filteredRecipes: action.payload,
+      };
   }
 };
