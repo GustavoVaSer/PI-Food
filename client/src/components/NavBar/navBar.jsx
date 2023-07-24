@@ -1,10 +1,10 @@
 import style from './navBar.module.css'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { getRecipeByName } from '../../redux/actions'
+import { getRecipesByName } from '../../redux/actions'
 import { Link } from 'react-router-dom'
 
-function NavBar() {
+ function NavBar() {
 
     const dispatch = useDispatch()
     
@@ -17,7 +17,7 @@ function NavBar() {
     }
     
     const onSearch = () =>{
-      dispatch(getRecipeByName(recipeName.recipeValue))
+      dispatch(getRecipesByName(recipeName.recipeValue))
     }
     
       return (
@@ -32,4 +32,4 @@ function NavBar() {
       )
     }
 
-export default NavBar;
+ export default NavBar;

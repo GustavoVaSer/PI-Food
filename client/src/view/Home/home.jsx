@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import  { Card } from '../views'
+import  { Card, NavBar } from '../views'
 import Pagination from '../Pagination/pagination'
 import { useDispatch, useSelector } from 'react-redux'
 import { filterByDiets, getRecipes, getDiets, healthScoreAsc, order, orderDesc, healthScoreDesc, getByApi, resetRecipes} from '../../redux/actions'
-import NavBar from '../../components/NavBar/NavBar'
 import  style from './home.module.css'
+import { Link } from 'react-router-dom'
 
 function Home() {
 

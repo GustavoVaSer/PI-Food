@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getDiets } from '../../redux/actions'
 import { useDispatch, useSelector } from 'react-redux'
 import validation from './validation'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import axios from 'axios'
 import style from './form.module.css'
 
@@ -127,7 +127,7 @@ function Form() {
                     {error.diets && <span>{error.diets}</span>}
                 </div>
                 <div className={style.divButtonAndImgForms}>
-                    <img src={gify} alt="gify osito" height= '150px'/>
+                    {/* <img src={gify} alt="gify osito" height= '150px'/> */}
 
                     {
                     newRecipe.name !== '' && newRecipe.summary !== '' && newRecipe.healthscore !== '' && newRecipe.image !== '' && newRecipe.image !== '' && newRecipe.diets.length >= 1
@@ -139,7 +139,7 @@ function Form() {
 
         </div>
             <div className={style.divImgFormsToHome}> 
-                <Link to='/home'><img src={takeHome} alt="Home button" height='200px' width='250px' /></Link> 
+                {/* <Link to='/home'><img src={takeHome} alt="Home button" height='200px' width='250px' /></Link>  */}
             </div>
     </div>)
 }
