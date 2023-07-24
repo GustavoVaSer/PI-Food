@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import  Card  from '../views'
-import Pagination from '../Pagination/Pagination'
+import  { Card } from '../views'
+import Pagination from '../Pagination/pagination'
 import { useDispatch, useSelector } from 'react-redux'
 import { filterByDiets, getRecipes, getDiets, healthScoreAsc, order, orderDesc, healthScoreDesc, getByApi, resetRecipes} from '../../redux/actions'
 import NavBar from '../../components/NavBar/NavBar'

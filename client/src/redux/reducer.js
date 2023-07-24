@@ -2,6 +2,7 @@ import {
   GET_RECIPES,
   GET_RECIPE_DETAIL,
   GET_DIETS,
+  FILTER_BY_DIETS,
   GET_RECIPES_BY_NAME,
   CREATE_RECIPE,
   ORDER,
@@ -35,6 +36,15 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         diets: action.payload,
+      };
+    case FILTER_BY_DIETS:
+      const dietsFiltered = state.filterRecipes.filter((e) =>
+        e.diets.includes(action.payload)
+      );
+      return {
+        ...state,
+        recipes:
+          action.payload === "All" ? state.filteredRecipes : dietsFiltered,
       };
     case GET_RECIPES_BY_NAME:
       return {

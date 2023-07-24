@@ -4,6 +4,7 @@ import axios from "axios";
 export const GET_RECIPES = "GET_RECIPES";
 export const GET_RECIPE_DETAIL = "GET_RECIPE_DETAIL";
 export const GET_DIETS = "GET_DIETS";
+export const FILTER_BY_DIETS = "FILTER_BY_DIETS";
 export const GET_RECIPES_BY_NAME = "GET_RECIPES_BY_NAME";
 export const CREATE_RECIPE = "CREATE_RECIPE";
 export const ORDER = "ORDER";
@@ -50,6 +51,14 @@ export const getDiets = () => async (dispatch) => {
   } catch (error) {
     console.error("Error fetching diets:", error);
   }
+};
+
+// Accion para filtrar por dietas
+export const filterByDiets = (diets) => {
+  return {
+    type: FILTER_BY_DIETS,
+    payload: diets,
+  };
 };
 
 // Acción para buscar recetas por nombre
