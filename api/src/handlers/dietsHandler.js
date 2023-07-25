@@ -6,7 +6,7 @@ const getDietsHandler = async (req, res) => {
   const { diet } = req.query;
   // console.log(diet);
   try {
-    const getDiets = await getAllDiets();
+    const getDiets = await getAllDiets(diet);
     res.status(200).json(getDiets);
   } catch (err) {
     res.status(400).json({ message: err });

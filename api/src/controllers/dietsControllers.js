@@ -3,10 +3,10 @@ const { getRecipesByApi } = require("./recipesControllers");
 
 // GET DIETS BY API ---------------
 
-const getDietsByApi = async () => {
+const getDietsByApi = async (diet) => {
   let allDiets = [];
 
-  const getDiets = await getRecipesByApi();
+  const getDiets = await getRecipesByApi(diet);
 
   const mapDiets = await getDiets?.map((e) => e.diets);
 
@@ -17,8 +17,8 @@ const getDietsByApi = async () => {
 
 // POST DIETS ON DB
 
-const getAllDiets = async () => {
-  const apiDiets = await getDietsByApi();
+const getAllDiets = async (diet) => {
+  const apiDiets = await getDietsByApi(diet);
 
   apiDiets.forEach((e) => {
     Diets.findOrCreate({
