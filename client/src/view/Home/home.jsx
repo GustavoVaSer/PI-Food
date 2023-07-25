@@ -45,13 +45,8 @@ function Home() {
         
         const handleDiets = (e) =>{
           e.preventDefault();
-           try {
               dispatch(filterByDiets(e.target.value))
-
-          } catch(error) {
-            debugger
-          }
-        //   setOrdered(`order ${e.target.value}`)
+          setOrdered(`order ${e.target.value}`)
         }
   
         const handleSort = (e) =>{
