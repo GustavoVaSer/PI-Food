@@ -47,6 +47,15 @@ const postRecipesHandler = async (req, res) => {
   // maneja la solicitud para crear una nueva receta
   const { name, summary, healthscore, image, steps, diets } = req.body;
   try {
+    // Verificar si ya existe una receta con el mismo nombre
+    const existingRecipe = await Recipe.findOne({ where: { name } });
+    if (existingRecipe) {
+      return res
+        .status(409)
+        .json({ message: "Recipe with the same name already exists" });
+    }
+
+    // Si no existe, crear la nueva receta
     const post = await Recipe.create({
       //metodo create de Sequelize para crear una nueva instancia de Recipe
       name,
@@ -54,14 +63,18 @@ const postRecipesHandler = async (req, res) => {
       healthscore,
       image,
       steps,
-    }); // Asociatting data
+    });
+
+    // Asociar las dietas
     diets?.map(async (e) => {
       let dietDb = await Diets.findOne({ where: { name: e } });
       await post.addDiets(dietDb);
     });
+
     res.status(201).json(post);
   } catch (err) {
-    res.status(400).json({ message: err });
+    console.error(err);
+    res.status(500).json({ message: "Internal server error" });
   }
 };
 

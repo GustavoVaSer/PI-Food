@@ -114,15 +114,21 @@ function Form() {
             <div className={style.divmappingAndOthersForms}>
                 <div className={style.divMappingDietsForms}>
                     {
-                        diets.length >= 1 ?
-                        diets?.map((elem, index) =>
-                        (
-                        <label htmlFor= 'diets' key={index}>
-                            <input type= 'checkbox' name= 'diets' value={elem.name} key= {index} onChange={handleChecked} />
-                            {elem.name}
+                        diets.length >= 1 ? (
+                          diets?.map((elem, index) => (
+                            <label htmlFor='diets' key={index}>
+                              <input
+                                type='checkbox'
+                                name='diets'
+                                value={elem.name}
+                                key={index}
+                                checked={newRecipe.diets.includes(elem.name)} // Verificar si la dieta está seleccionada
+                                onChange={handleChecked}
+                              />
+                              {elem.name}
                             </label>
-                        ))
-                        : null
+                             ))
+                             ) : null
                     }
                     {error.diets && <span>{error.diets}</span>}
                 </div>
