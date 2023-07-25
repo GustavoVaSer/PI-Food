@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "pegaso23", 
+    "database": "food", 
+    "host": "localhost", 
+    "dialect": "postgres" 
+  },
+  "test": {
+    "username": "postgres",
+    "password": "pegaso23",
+    "database": "food_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "pegaso23",
+    "database": "food_production",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
