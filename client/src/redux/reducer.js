@@ -43,7 +43,7 @@ const reducer = (state = initialState, action) => {
       // );
       return {
         ...state,
-        diets: action.payload,
+        recipes: action.payload,
         // === "All" ? state.filteredRecipes : dietsFiltered,
       };
     case GET_RECIPES_BY_NAME:

@@ -45,7 +45,7 @@ function Home() {
         
         const handleDiets = (e) =>{
           e.preventDefault();
-          try {
+           try {
               dispatch(filterByDiets(e.target.value))
 
           } catch(error) {

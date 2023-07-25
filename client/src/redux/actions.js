@@ -53,15 +53,16 @@ export const getDiets = () => async (dispatch) => {
 };
 
 // Accion para filtrar por dietas
-export const filterByDiets = async (option) => {
+// export const filterByDiets = () => async (dispatch) => {
+export const filterByDiets = (option) => async (dispatch) => {
   // llamar con axios el endpoint de get diets + quey param del option elegido
-  const response = await axios.get("http://localhost:3001/diets", {
+  const response = await axios.get("http://localhost:3001/recipes", {
     params: { diet: option },
   });
-  return {
+  dispatch({
     type: FILTER_BY_DIETS,
     payload: response.data,
-  };
+  });
 };
 
 // Acción para buscar recetas por nombre
