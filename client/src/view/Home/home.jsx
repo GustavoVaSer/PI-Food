@@ -111,7 +111,7 @@ function Home() {
             {
                 diets?.map((e, index) =>
                 (
-                <option value={e} key={index}>{e.name}</option>
+                <option value={e.name} key={index}>{e.name}</option>
                 )
                 )
             }

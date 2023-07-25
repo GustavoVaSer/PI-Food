@@ -10,7 +10,7 @@ const url = "https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5"; // m
 
 // GET RECIPE BY API ---------------
 
-const getRecipesByApi = async () => {
+const getRecipesByApi = async (diet) => {
   //query param y mandarselo a la url
   const apiUrl = await axios.get(url);
   const apiInfo = await apiUrl.data.results?.map((data) => {
