@@ -30,6 +30,7 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      // diets: {},
       createdInDb: {
         type: DataTypes.BOOLEAN, //es una columna adicional que representa si la receta fue creada en la base de datos.
         allowNull: false,

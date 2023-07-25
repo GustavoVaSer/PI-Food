@@ -38,13 +38,9 @@ const reducer = (state = initialState, action) => {
         diets: action.payload,
       };
     case FILTER_BY_DIETS:
-      // const dietsFiltered = state.filteredRecipes.filter((e) =>
-      //   e.diets.includes(action.payload)
-      // );
       return {
         ...state,
         recipes: action.payload,
-        // === "All" ? state.filteredRecipes : dietsFiltered,
       };
     case GET_RECIPES_BY_NAME:
       return {

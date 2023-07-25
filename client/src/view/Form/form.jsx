@@ -118,8 +118,8 @@ function Form() {
                         diets?.map((elem, index) =>
                         (
                         <label htmlFor= 'diets' key={index}>
-                            <input type= 'checkbox' name= 'diets' value={elem} key= {index} onChange={handleChecked} />
-                            {elem}
+                            <input type= 'checkbox' name= 'diets' value={elem.name} key= {index} onChange={handleChecked} />
+                            {elem.name}
                             </label>
                         ))
                         : null
