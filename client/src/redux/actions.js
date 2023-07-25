@@ -53,10 +53,14 @@ export const getDiets = () => async (dispatch) => {
 };
 
 // Accion para filtrar por dietas
-export const filterByDiets = (diets) => {
+export const filterByDiets = async (option) => {
+  // llamar con axios el endpoint de get diets + quey param del option elegido
+  const response = await axios.get("http://localhost:3001/diets", {
+    params: { diet: option },
+  });
   return {
     type: FILTER_BY_DIETS,
-    payload: diets,
+    payload: response.data,
   };
 };
 

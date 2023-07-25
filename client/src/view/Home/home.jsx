@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import  { Card, NavBar } from '../views'
+import Card from '../../components/Card/card'
+import NavBar from '../../components/NavBar/navBar'
 import Pagination from '../Pagination/pagination'
 import { useDispatch, useSelector } from 'react-redux'
 import { filterByDiets, getRecipes, getDiets, healthScoreAsc, order, orderDesc, healthScoreDesc, getByApi, resetRecipes} from '../../redux/actions'
@@ -39,7 +40,7 @@ function Home() {
        
       useEffect(()=>{
           dispatch(getRecipes())
-          dispatch(getDiets())
+           dispatch(getDiets())
         },[dispatch])
         
         const handleDiets = (e) =>{
@@ -110,7 +111,7 @@ function Home() {
             {
                 diets?.map((e, index) =>
                 (
-                <option value={e} key={index}>{e}</option>
+                <option value={e} key={index}>{e.name}</option>
                 )
                 )
             }
