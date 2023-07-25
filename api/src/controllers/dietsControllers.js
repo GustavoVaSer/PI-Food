@@ -6,9 +6,9 @@ const { getRecipesByApi } = require("./recipesControllers");
 const getDietsByApi = async (diet) => {
   let allDiets = [];
 
-  const getDiets = await getRecipesByApi(diet);
+  const getDiets = await getRecipesByApi(diet); // te estass trayendo recetas de la api
 
-  const mapDiets = await getDiets?.map((e) => e.diets);
+  const mapDiets = await getDiets?.map((e) => e.diets); // de cada receta creas un mapa de dietas
 
   mapDiets.forEach((e) => e.forEach((dietByDiet) => allDiets.push(dietByDiet))); //  Utiliza dos bucles forEach() para iterar sobre el array multidimensional "allDiets"
 

@@ -9,7 +9,8 @@ const {
 const getAllRecipesHandler = async (req, res) => {
   //maneja la solicitud para obtener todas las recetas
   try {
-    const allRecipes = await getAllRecipes();
+    const { diet } = req.query;
+    const allRecipes = await getAllRecipes(diet);
     if (req.query.hasOwnProperty("name")) {
       const { name } = req.query;
       const filteredName = allRecipes.filter((e) =>
