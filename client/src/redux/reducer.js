@@ -64,13 +64,13 @@ const reducer = (state = initialState, action) => {
         recipes: state.recipes.sort((a, b) => b.name.localeCompare(a.name)),
       };
     case GET_BY_API:
-      // la acción trae un arreglo de recetas de la API en action.payload
-      const apiRecipes = action.payload;
-      // Combina las recetas de la API con las recetas actuales del estado
-      const combinedRecipes = [...state.recipes, ...apiRecipes];
+      console.log("mi filtro" + state.recipes);
       return {
         ...state,
-        recipes: combinedRecipes, // Actualiza las recetas con las combinadas
+        recipes:
+          action.payload === "db"
+            ? state.recipes.filter((e) => e.createdInDb)
+            : state.recipes.filter((x) => !x.createdInDb),
       };
     case HS_ASC:
       return {
