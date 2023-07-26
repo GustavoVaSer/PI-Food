@@ -150,7 +150,7 @@ function Home() {
               />
             ))
           ) : allRecipes.length === 0 ? (
-            <h1>Recipe not found</h1>
+            <h1>Loading...</h1>
           ) : null}
         </div>
 
