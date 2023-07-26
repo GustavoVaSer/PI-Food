@@ -11,7 +11,7 @@ function Home() {
 
     const dispatch = useDispatch()
   
-     const allRecipes = useSelector((state)=>state.recipes)
+     const allRecipes = useSelector((state)=> state.recipes)
   
      const diets = useSelector((state) => state.diets)
   
