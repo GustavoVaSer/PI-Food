@@ -46,7 +46,7 @@ const reducer = (state = initialState, action) => {
       console.log(action.payload);
       return {
         ...state,
-        filteredRecipes: action.payload,
+        recipes: action.payload,
       };
     case CREATE_RECIPE:
       return {
