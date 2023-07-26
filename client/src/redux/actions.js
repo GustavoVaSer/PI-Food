@@ -11,7 +11,7 @@ export const ORDER_DESC = "ORDER_DESC ";
 export const GET_BY_API = "GET_BY_API";
 export const HS_ASC = "HS_ASC";
 export const HS_DESC = "HS_DESC";
-export const RESET = "RESET";
+// export const RESET = "RESET";
 
 // Acción para obtener todas las recetas
 export const getRecipes = () => async (dispatch) => {
@@ -127,8 +127,8 @@ export const healthScoreDesc = () => {
   };
 };
 // Accion para resetear
-export const resetRecipes = () => {
-  return {
-    type: RESET,
-  };
-};
+// export const resetRecipes = () => {
+//   return {
+//     type: RESET,
+//   };
+// };

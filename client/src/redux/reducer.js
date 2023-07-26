@@ -10,7 +10,7 @@ import {
   GET_BY_API,
   HS_ASC,
   HS_DESC,
-  RESET,
+  // RESET,
 } from "./actions";
 
 const initialState = {
@@ -51,21 +51,17 @@ const reducer = (state = initialState, action) => {
     case CREATE_RECIPE:
       return {
         ...state,
-        recipes: [...state.recipes, action.payload], // Agregar la nueva receta al array de recetas
+        recipes: /*[...state.recipes,*/ action.payload, // Agregar la nueva receta al array de recetas
       };
     case ORDER:
       return {
         ...state,
-        recipes: state.filteredRecipes.sort((a, b) =>
-          a.name.localeCompare(b.name)
-        ),
+        recipes: state.recipes.sort((a, b) => a.name.localeCompare(b.name)),
       };
     case ORDER_DESC:
       return {
         ...state,
-        recipes: state.filteredRecipes.sort((a, b) =>
-          b.name.localeCompare(a.name)
-        ),
+        recipes: state.recipes.sort((a, b) => b.name.localeCompare(a.name)),
       };
     case GET_BY_API:
       // la acción trae un arreglo de recetas de la API en action.payload
@@ -79,22 +75,20 @@ const reducer = (state = initialState, action) => {
     case HS_ASC:
       return {
         ...state,
-        recipes: state.filteredRecipes.sort(
+        recipes: state.recipes.sort(
           (a, b) => b.healthscore - a.healthscore //recetas se muestren de manera ascendente según su puntaje de salud
         ),
       };
     case HS_DESC:
       return {
         ...state,
-        recipes: state.filteredRecipes.sort(
-          (a, b) => a.healthscore - b.healthscore
-        ),
+        recipes: state.recipes.sort((a, b) => a.healthscore - b.healthscore),
       };
-    case RESET:
-      return {
-        ...state,
-        recipes: state.filteredRecipes,
-      };
+    // case RESET:
+    //   return {
+    //     ...state,
+    //     recipes: initialState.recipes,
+    //   };
 
     default:
       return { ...state };
