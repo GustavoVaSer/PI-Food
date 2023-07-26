@@ -43,6 +43,7 @@ const reducer = (state = initialState, action) => {
         recipes: action.payload,
       };
     case GET_RECIPES_BY_NAME:
+      console.log(action.payload);
       return {
         ...state,
         filteredRecipes: action.payload,

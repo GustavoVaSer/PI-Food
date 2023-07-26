@@ -22,7 +22,7 @@ function Home() {
   
       const indexOfLastElement = currentPage * elementsPerPage
       const indexOfFirstElement = indexOfLastElement - elementsPerPage
-      const currentElements = allRecipes.slice(indexOfFirstElement, indexOfLastElement)
+      const filteredRecipes = allRecipes.slice(indexOfFirstElement, indexOfLastElement)
   
       const paginationButtonNext = (e) => {
         e.preventDefault();
@@ -138,23 +138,22 @@ function Home() {
             </div>
         </div>
         <div className={style.cards}>
-         {
-            currentElements?.length >= 1 ?
-            allRecipes.length === 0 ?
-            (<h1>Recipe not found</h1>)
-            : (currentElements.map((e, index )=> 
-          (
-            <Card 
-            key={index}
-            id = {e.id}
-            name= {e.name}
-            image={e.image}
-            diets={e.diets}
-            healthscore={e.healthscore}
-            />
-          )) ) : null
-         }
+          {filteredRecipes?.length >= 1 ? (
+            filteredRecipes.map((e, index) => (
+              <Card
+                key={index}
+                id={e.id}
+                name={e.name}
+                image={e.image}
+                diets={e.diets}
+                healthscore={e.healthscore}
+              />
+            ))
+          ) : allRecipes.length === 0 ? (
+            <h1>Recipe not found</h1>
+          ) : null}
         </div>
+
         </div> 
     )
   }
