@@ -116,7 +116,7 @@ function Home() {
                 )
             }
             </select>
-            <button className={style.buttonOrderHome} value='reset' onClick ={(e)=> handleReset(e)}>Reset</button>
+            <button className={style.buttonOrderHome} value='reset' onClick ={(e)=> handleReset(e)}>Get Recipes Searched</button>
         </div>
         <div className={style.boxPagination}>
             <div>
