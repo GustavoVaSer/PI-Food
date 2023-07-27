@@ -30,7 +30,8 @@ function Form() {
       summary: '',
       healthscore: '',
       steps: '',
-      image: ''
+      image: '',
+      diets: []
     })
 
     const handleChange = (e)=>{

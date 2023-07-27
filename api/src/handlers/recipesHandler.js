@@ -65,11 +65,15 @@ const postRecipesHandler = async (req, res) => {
       steps,
     });
 
-    // Asociar las dietas
-    diets?.map(async (e) => {
-      let dietDb = await Diets.findOne({ where: { name: e } });
-      await post.addDiets(dietDb);
-    });
+    // Asociar las dietas a la receta
+    for (const dietName of diets) {
+      let diet = await Diets.findOne({ where: { name: dietName } });
+      if (!diet) {
+        // Si la dieta no existe en la base de datos, crea una nueva instancia de Diets
+        diet = await Diets.create({ name: dietName });
+      }
+      await post.addDiets(diet);
+    }
 
     res.status(201).json(post);
   } catch (err) {

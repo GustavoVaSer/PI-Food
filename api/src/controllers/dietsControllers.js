@@ -20,11 +20,16 @@ const getDietsByApi = async (diet) => {
 const getAllDiets = async (diet) => {
   const apiDiets = await getDietsByApi(diet);
 
-  apiDiets.forEach((e) => {
-    Diets.findOrCreate({
+  // Crea un array de promesas para el método findOrCreate
+  const promises = apiDiets.map((e) => {
+    return Diets.findOrCreate({
       where: { name: e },
     });
   });
+
+  // Espera a que todas las promesas se resuelvan
+  await Promise.all(promises);
+
   const getDiets = await Diets.findAll();
 
   return getDiets;
