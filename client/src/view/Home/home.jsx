@@ -3,7 +3,7 @@ import Card from '../../components/Card/card'
 import NavBar from '../../components/NavBar/navBar'
 import Pagination from '../Pagination/pagination'
 import { useDispatch, useSelector } from 'react-redux'
-import { filterByDiets, getRecipes, getDiets, healthScoreAsc, order, orderDesc, healthScoreDesc, getByApi, /*resetRecipes*/} from '../../redux/actions'
+import { filterByDiets, getRecipes, getDiets, healthScoreAsc, order, orderDesc, healthScoreDesc, getByApi} from '../../redux/actions'
 import  style from './home.module.css'
 import { Link } from 'react-router-dom'
 
@@ -73,12 +73,6 @@ function Home() {
           setOrdered(`order ${e.target.value}`)
         }
   
-        // const handleReset = (e) =>{
-        //   e.preventDefault()
-        //   dispatch(resetRecipes())
-        //   setOrdered(`order ${e.target.value}`)
-        // }
-  
     return (
         <div className={style.divHome}>
             <NavBar/>
@@ -116,7 +110,6 @@ function Home() {
                 )
             }
             </select>
-            {/* <button type="button" className={style.buttonOrderHome} value='reset' onClick ={(e)=> handleReset(e)}>Reset</button> */}
         </div>
         <div className={style.boxPagination}>
             <div>

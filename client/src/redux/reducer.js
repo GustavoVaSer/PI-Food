@@ -10,7 +10,6 @@ import {
   GET_BY_API,
   HS_ASC,
   HS_DESC,
-  // RESET,
 } from "./actions";
 
 const initialState = {
@@ -84,11 +83,6 @@ const reducer = (state = initialState, action) => {
         ...state,
         recipes: state.recipes.sort((a, b) => a.healthscore - b.healthscore),
       };
-    // case RESET:
-    //   return {
-    //     ...state,
-    //     recipes: initialState.recipes,
-    //   };
 
     default:
       return { ...state };
