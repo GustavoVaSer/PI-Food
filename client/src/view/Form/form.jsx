@@ -57,6 +57,7 @@ function Form() {
             diets: newRecipe.diets.filter(x => x !== e.target.value)
       })
     }
+    console.log("Diets selected:", newRecipe.diets);
   }     
             const handleSubmit = (e) =>{
       e.preventDefault()
