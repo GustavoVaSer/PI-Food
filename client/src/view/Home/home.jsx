@@ -23,6 +23,7 @@ function Home() {
       const indexOfLastElement = currentPage * elementsPerPage
       const indexOfFirstElement = indexOfLastElement - elementsPerPage
       const filteredRecipes = allRecipes.slice(indexOfFirstElement, indexOfLastElement)
+      // const filteredRecipes = useSelector((state) => state.recipes);
   
       const paginationButtonNext = (e) => {
         e.preventDefault();
