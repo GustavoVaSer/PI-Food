@@ -3,7 +3,7 @@ import Card from '../../components/Card/card'
 import NavBar from '../../components/NavBar/navBar'
 import Pagination from '../Pagination/pagination'
 import { useDispatch, useSelector } from 'react-redux'
-import { filterByDiets, getRecipes, getDiets, healthScoreAsc, order, orderDesc, healthScoreDesc, getByApi} from '../../redux/actions'
+import { filterByDiets, getRecipes, getDiets, healthScoreAsc, order, orderDesc, healthScoreDesc, /*getByApi*/} from '../../redux/actions'
 import  style from './home.module.css'
 import { Link } from 'react-router-dom'
 
@@ -68,11 +68,11 @@ function Home() {
           console.log(healthScoreAsc());
         }
   
-        const handleGetBy = (e) =>{
-          e.preventDefault()
-          dispatch(getByApi(e.target.value))
-          setOrdered(`order ${e.target.value}`)
-        }
+        // const handleGetBy = (e) =>{
+        //   e.preventDefault()
+        //   dispatch(getByApi(e.target.value))
+        //   setOrdered(`order ${e.target.value}`)
+        // }
   
     return (
         <div className={style.divHome}>
@@ -93,10 +93,10 @@ function Home() {
                 <button className={style.buttonSortHome} value='hsdesc' onClick={(e)=>handleHs(e)}>Less Healthy</button>
             </div>
     
-            <div className={style.divFilterHome}>
+            {/* <div className={style.divFilterHome}>
                 <button className={style.buttonFilterHome} value='api' onClick={(e)=>handleGetBy(e)}>API</button>
                 <button className={style.buttonFilterHome} value='db' onClick={(e)=>handleGetBy(e)}>BD</button>
-            </div>
+            </div> */}
             
         </div>
       

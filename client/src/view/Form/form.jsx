@@ -46,20 +46,20 @@ function Form() {
           }))
       }
 
-  //     const handleChecked = (e) =>{
-  //       if (e.target.checked){
-  //         setNewRecipe({
-  //           ...newRecipe,
-  //           diets : [...newRecipe.diets, e.target.value]
-  //         })}
-  //       else{
-  //         setNewRecipe({
-  //           ...newRecipe,
-  //           diets: newRecipe.diets.filter(x => x !== e.target.value)
-  //     })
-  //   }
-  //   console.log("Diets selected:", newRecipe.diets);
-  // }     
+      const handleChecked = (e) =>{
+        if (e.target.checked){
+          setNewRecipe({
+            ...newRecipe,
+            diets : [...newRecipe.diets, e.target.value]
+          })}
+        else{
+          setNewRecipe({
+            ...newRecipe,
+            diets: newRecipe.diets.filter(x => x !== e.target.value)
+      })
+    }
+    console.log("Diets selected:", newRecipe.diets);
+  }     
             const handleSubmit = (e) =>{
       e.preventDefault()
       axios.post('http://localhost:3001/recipes', newRecipe)
@@ -125,7 +125,7 @@ function Form() {
                                 value={elem.name}
                                 key={index}
                                 checked={newRecipe.diets.includes(elem.name)} // Verificar si la dieta está seleccionada
-                                onChange={handleChange}
+                                onChange={handleChecked}
                               />
                               {elem.name}
                             </label>
