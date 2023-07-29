@@ -35,10 +35,13 @@ const getRecipesByApi = async (diet) => {
 
 //GET RECIPES BY DATA BASE
 
-const getRecipesByDb = async () => {
+const getRecipesByDb = async (diet) => {
+  const query = {};
+  if (diet) query.name = diet;
   const recipe = await Recipe.findAll({
     include: {
       model: Diets,
+      where: query,
       attributes: ["name"],
     },
   });
@@ -90,7 +93,7 @@ const getRecipesById = async (id) => {
 
 const getAllRecipes = async (diet) => {
   const getByApi = await getRecipesByApi(diet);
-  const getByDb = await getRecipesByDb();
+  const getByDb = await getRecipesByDb(diet);
   const allRecipes = getByDb.concat(getByApi);
   return allRecipes;
 };
