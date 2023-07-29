@@ -30,7 +30,10 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      // diets: {},
+      // diets: {
+      //   type: DataTypes.ARRAY(DataTypes.STRING), // Utilizamos ARRAY para almacenar las dietas como un array de strings
+      //   allowNull: false, // Puedes cambiar a false si las dietas son obligatorias
+      // },
       createdInDb: {
         type: DataTypes.BOOLEAN, //es una columna adicional que representa si la receta fue creada en la base de datos.
         allowNull: false,
