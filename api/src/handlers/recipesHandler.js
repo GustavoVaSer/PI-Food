@@ -64,10 +64,12 @@ const postRecipesHandler = async (req, res) => {
       image,
       steps,
     });
-
+    console.log("Recipe", post);
+    console.log("Diets", diets);
     // Asociar las dietas a la receta
     for (const dietName of diets) {
       let diet = await Diets.findOne({ where: { name: dietName } });
+      console.log("Db diet", diet);
       if (!diet) {
         // Si la dieta no existe en la base de datos, crea una nueva instancia de Diets
         diet = await Diets.create({ name: dietName });
