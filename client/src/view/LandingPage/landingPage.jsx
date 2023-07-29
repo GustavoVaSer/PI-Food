@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 function LandingPage() {
   return (
     <div className={styles.landingPage}>
-      <h1 className={styles.title}>Welcome to Our Food Page!</h1>
+      <h1 className={styles.title}>RECIPES BOOK</h1>
       <Link to="/home">
-        <button>Bon appetite!</button>
+        <button className={styles.buttonLandingPage}> Bone appetit</button>
       </Link>
     </div>
   );
