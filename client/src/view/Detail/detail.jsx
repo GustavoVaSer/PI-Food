@@ -15,10 +15,11 @@ function Detail() {
   }, [dispatch, id]);
 
   return (
-    <div>
+    <div className={style.conteiner}>
       {selector.hasOwnProperty("name") ? (
-        <div className={style.allDetails}>
+        // <div className={style.allDetails}>
           <div className={style.detailInfo}>
+            <img className={style.imgDetails} src={selector.image} alt={selector.name} width='300px' height='200px' />
             <h2>Name: </h2>
             <p>{selector.name}</p>
             <h2>Summary: </h2>
@@ -29,14 +30,9 @@ function Detail() {
             <p>{selector.steps}</p>
             <h2>Diets: </h2>
             <p>{selector.diets}</p>
-          </div>
-          <div className={style.divImgDetails}>
-            <img src={selector.image} alt={selector.name} width='300px' height='200px' />
-          </div> 
-          <div className={style.divImgToHome}>
             <Link to='/home'><img alt="Home button" height='200px' width='250px' /></Link>
           </div>
-        </div>
+        // </div>
       ) : null}
     </div>
   );

@@ -1,8 +1,13 @@
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .detailInfo{
     border: solid black;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 20px;
     border-radius: 10px;
     background-color: rgb(255, 198, 217);
@@ -13,16 +18,16 @@
     text-justify: distribute;
 }
 
-.allDetails{
+/* .allDetails{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* background-image: url('../../images/fondo-food-comida-rapida.jpg'); */
+    background-image: url('../../images/fondo-food-comida-rapida.jpg');
     height: 100vh;
     padding: 15px;
-}
+} */
 
-.divImgDetails{
+.imgDetails{
     display: flex;
     align-items:center;
     padding: 10px;

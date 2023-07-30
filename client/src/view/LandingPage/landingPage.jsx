@@ -7,7 +7,7 @@ function LandingPage() {
     <div className={styles.landingPage}>
       <h1 className={styles.title}>RECIPES BOOK</h1>
       <Link to="/home">
-        <button className={styles.buttonLandingPage}> Bone appetit</button>
+        <button className={styles.buttonLandingPage}> Bon appetit</button>
       </Link>
     </div>
   );
