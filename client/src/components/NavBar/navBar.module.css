@@ -2,28 +2,35 @@
     display: flex;
     align-items: center;
     justify-content: center; 
-    background-image: url('https://i.pinimg.com/736x/c2/bb/3f/c2bb3f847844eed097c45ec0927dd0e9.jpg');
+    background-color: #515151;
     padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
 .buttonNav{
-    top: 15px;
-    position: absolute;
-    -moz-border-radius: 28;
-    border-radius: 28px;
-    border: 1px solid black;
     transition: all 1s ease;
-    height: 30px;
-    width: 70px;
+    height: 40px;
+    width: 60px;
+    font-size: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
 }
 
 .buttonNav:hover {
-    background:palevioletred;;
+    background: #B5B5B5;;
     color: #fff;
   }
 
 .inputNav{
+    margin-right: 10px;
     width: 240px;
     height: 40px;
     padding: 0 20px;
@@ -32,11 +39,15 @@
     border: 1px solid silver;
     border-radius: 30px;
 }
-
+.inputAndButtomSearch{
+    display: flex;
+}
  .imgNav{
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    left: 1rem;
-    top: .5em;
+    height: 50px;
+    width: 50px;
+    background-image: url(https://cdn3.vectorstock.com/i/1000x1000/79/82/arrow-left-rounded-square-icon-vector-10977982.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    margin-left: 20px;
+    border: 5px solid black;
 }

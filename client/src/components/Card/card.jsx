@@ -11,7 +11,7 @@ function Card(props) {
       <h3 className={style.titleCards}>{name}</h3>
       <Link to={`/detail/${id}`} ><img src={image} alt={name} width='300px'/></Link>
       <p className={style.dietsCards}>{diets.join(', ')}</p>
-      <label>{healthscore}</label>
+      <label className={style.healthscore}>{healthscore}</label>
     </div>
   )
 }

@@ -4,23 +4,42 @@
     padding: 10px;
     height: 450px;
     width: min-content;
-    background-image: url('https://i.pinimg.com/736x/c2/bb/3f/c2bb3f847844eed097c45ec0927dd0e9.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #B5B5B5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
 }
 
 .titleCards{
-    font-family: 'Gloria Hallelujah', cursive;
-    font-size: large;
+    /* font-family: 'Gloria Hallelujah', cursive; */
+    font-size: 25px;
     text-align: center;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Wendy One', sans-serif;
+    font-weight: 400;
+    -webkit-text-stroke: 0.05px #B5B5B5;
 }
 
 .dietsCards{
-    font-family: 'Gloria Hallelujah', cursive;
+    /* font-family: 'Gloria Hallelujah', cursive; */
     font-size: large;
     text-align: start;
+    color: #515151;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Wendy One', sans-serif;
+    /* -webkit-text-stroke: 0.05px #000; */
+    text-align: center;
+    font-weight: bolder;
 }
 
 .cards img{
     border-radius: 15px;
+}
+.healthscore{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Wendy One', sans-serif;
+    font-size: 30px;
 }

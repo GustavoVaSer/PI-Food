@@ -1,21 +1,24 @@
 .pagePagination{
-    height: 40px;
-    width: 40px;
-    color: white;
+    height: 45px;
+    width: 45px;
+    color: #B5B5B5;
     background: rgb(49, 49, 49);
-    border: 2px solid;
-    border-color: white;;
     transition: all .3s ease;
-    position: relative;
     border-radius: 5px;
+    font-size: 30px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pagePagination:hover {
-    background:palevioletred;;
-    color: #fff;
+    background: #B5B5B5;;
+    color: #B5B5B5;
   }
 
   .divPagination{
-    margin-top: 10px;
-    text-align: center;
-  }
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+}

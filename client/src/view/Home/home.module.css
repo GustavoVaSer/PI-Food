@@ -1,14 +1,28 @@
+button{
+  border: 5px solid #000;
+  background: url(https://ghea.org/wp-content/uploads/2021/09/hu-promo-bg-300x163.jpg), lightgray 50% / cover no-repeat;
+  box-shadow: 0px 4px 29px 20px rgba(132, 131, 131, 0.58) inset;
+  color: #B5B5B5;
+  font-family: Wendy One;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.92px;
+  -webkit-text-stroke: 3px #000;
+}
+.divHome{
+  background-image: url(https://img.freepik.com/fotos-premium/fondo-textura-piso-madera-dura_36078-963.jpg?w=900) ;
+  }
 .h1{
     font-family: 'Coming Soon', cursive;
 }
 
 .cards{
     display: flex;
-    gap: 1rem;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding: 1rem;
+    margin: 30px;
 }
 
 /* .divHome{
@@ -24,7 +38,7 @@
 }
 
 .buttonHomeForm{
-    position: absolute;
+    /* position: absolute;
     top: 15px;
     border-radius: 6px;
     -moz-border-radius: 28;
@@ -32,11 +46,24 @@
     border: 1px solid black;
     transition: all 1s ease;
     height: 30px;
-    width: 60px;
+    width: 60px; */
+    border-radius: 15px;
+    background: url(https://ghea.org/wp-content/uploads/2021/09/hu-promo-bg-300x163.jpg), lightgray 50% / cover no-repeat;
+    box-shadow: 0px 4px 29px 20px rgba(132, 131, 131, 0.58) inset;
+    width: 220px;
+    height: 50px;
+    color: #B5B5B5;
+    font-family: Wendy One;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.92px;
+    -webkit-text-stroke: 3px #000;
 }
 
 .buttonHomeForm:hover {
-    background:palevioletred;;
+    background:#B5B5B5;
     color: #fff;
   }
 
@@ -54,18 +81,17 @@
 }
 
 .buttonOrderHome{
-    height: 30px;
-    width: 60px;
-    border-radius: 6px;
-    -moz-border-radius: 28;
-    border-radius: 28px;
-    border: 1px solid black;
+    height: 50px;
+    width: 90px;
+    border-radius: 14px;
+    border: 5px solid black;
     transition: all .3s ease;
     margin: 5px;
+    font-size: 40px;
 }
 
 .buttonOrderHome:hover {
-    background:palevioletred;;
+    background:#B5B5B5;;
     color: #fff;
   }
   
@@ -76,18 +102,16 @@
 }
 
 .buttonSortHome{
-    height: 30px;
-    width: 200px;
-    border-radius: 6px;
-    -moz-border-radius: 28;
-    border-radius: 28px;
-    border: 1px solid black;
+    height: 50px;
+    width: 250px;
     transition: all .3s ease;
     margin: 5px;
+    border-radius: 8px;
+    font-size: 40px;
 }
 
 .buttonSortHome:hover {
-    background:palevioletred;;
+    background:#B5B5B5;;
     color: #fff;
   }
 
@@ -95,6 +119,7 @@
     display: flex;
     flex-direction: column;
     /* align-items: end; */
+
 }
 
 .buttonFilterHome{
@@ -109,7 +134,7 @@
 }
 
 .buttonFilterHome:hover {
-    background:palevioletred;;
+    background:#B5B5B5;;
     color: #fff;
   }
 
@@ -124,22 +149,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
   }
 
   .divPrevButton{
+    margin: 20px;
     height: 40px;
-    width: 40px;
-    color: white;
-    background: rgb(49, 49, 49);
-    border: 2px solid;
-    border-color: white;;
+    width: 90px;
+    color: #B5B5B5;
     transition: all .3s ease;
     position: relative;
     border-radius: 5px;
+    font-size: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   .divPrevButton:hover {
-    background:palevioletred;;
+    background:#B5B5B5;;
     color: #fff;
   }

@@ -77,31 +77,11 @@ function Home() {
     return (
         <div className={style.divHome}>
             <NavBar/>
-            <div className={style.divButtonForm}>
-                <Link to='/form'><button className={style.buttonHomeForm}>Form</button></Link>
-            </div>
+            {/* <div className={style.divButtonForm}> */}
+            {/* </div> */}
   
         <div className={style.allButtonsHome}>
-    
-            <div className={style.divOrderHome}>
-                <button className={style.buttonOrderHome} value='Asc' onClick={(e)=>handleSort(e)}>A-Z</button>
-                <button className={style.buttonOrderHome} value='Desc' onClick={(e)=>handleSort(e)}>Z-A</button>
-            </div>
-            
-            <div className={style.divSortHome}>
-                <button className={style.buttonSortHome} value='hsasc' onClick={(e)=>handleHs(e)}>Healthier</button>
-                <button className={style.buttonSortHome} value='hsdesc' onClick={(e)=>handleHs(e)}>Less Healthy</button>
-            </div>
-    
-            {/* <div className={style.divFilterHome}>
-                <button className={style.buttonFilterHome} value='api' onClick={(e)=>handleGetBy(e)}>API</button>
-                <button className={style.buttonFilterHome} value='db' onClick={(e)=>handleGetBy(e)}>BD</button>
-            </div> */}
-            
-        </div>
-      
-        <div className={style.divSelectHome}>
-            <select onChange={(e)=>handleDiets(e)} className={style.buttonSortHome}>
+        <select onChange={(e)=>handleDiets(e)} className={style.buttonSortHome}>
             <option value="All">All Diets</option>
             {
                 diets?.map((e, index) =>
@@ -111,7 +91,28 @@ function Home() {
                 )
             }
             </select>
+            
+            {/* <div className={style.divOrderHome}> */}
+                <button className={style.buttonOrderHome} value='Asc' onClick={(e)=>handleSort(e)}>A-Z</button>
+                <button className={style.buttonOrderHome} value='Desc' onClick={(e)=>handleSort(e)}>Z-A</button>
+            {/* </div> */}
+            
+            {/* <div className={style.divSortHome}> */}
+                <button className={style.buttonSortHome} value='hsasc' onClick={(e)=>handleHs(e)}>Healthier</button>
+                <button className={style.buttonSortHome} value='hsdesc' onClick={(e)=>handleHs(e)}>Less Healthy</button>
+            {/* </div> */}
+    
+            {/* <div className={style.divFilterHome}>
+                <button className={style.buttonFilterHome} value='api' onClick={(e)=>handleGetBy(e)}>API</button>
+                <button className={style.buttonFilterHome} value='db' onClick={(e)=>handleGetBy(e)}>BD</button>
+            </div> */}
+            <Link to='/form'><button className={style.buttonHomeForm}>New recipe</button></Link>
+
         </div>
+      
+        {/* <div className={style.divSelectHome}>
+            
+        </div> */}
         <div className={style.boxPagination}>
             <div>
                 {currentPage === 1 ? ( <span></span> ) : ( <button className={style.divPrevButton} onClick={e => paginationButtonPrev(e)} >prev</button> )}
