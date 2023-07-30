@@ -22,15 +22,15 @@ function Detail() {
             <img className={style.imgDetails} src={selector.image} alt={selector.name} width='300px' height='200px' />
             <h2>Name: </h2>
             <p>{selector.name}</p>
-            <h2>Summary: </h2>
-            <p className={style.summary}>{selector.summary}</p>
-            <h2>healthscore: </h2>
-            <label>{selector.healthscore}</label>
-            <h2>Steps: </h2>
-            <p>{selector.steps}</p>
             <h2>Diets: </h2>
             <p>{selector.diets}</p>
-            <Link to='/home'><img alt="Home button" height='200px' width='250px' /></Link>
+            <h2>Summary: </h2>
+            <p className={style.summary}>{selector.summary}</p>
+            <h2>Steps: </h2>
+            <p>{selector.steps}</p>
+            <h2>healthscore: </h2>
+            <label className={style.healthscore}>{selector.healthscore}</label>
+            <Link to='/home'><button className={style.buttonBack}>Back</button></Link>
           </div>
         // </div>
       ) : null}

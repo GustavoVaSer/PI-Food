@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(https://img.freepik.com/fotos-premium/fondo-textura-piso-madera-dura_36078-963.jpg?w=900);
+    background-size: cover;
 }
 .detailInfo{
     border: solid black;
@@ -10,12 +12,34 @@
     align-items: center;
     padding: 20px;
     border-radius: 10px;
-    background-color: rgb(255, 198, 217);
-    width: 70vh;
+    background-color: #b5b5b5d4;
+    width: 75vh;
+    box-shadow: 0 0 700px black;
+    font-family: Wendy One;
+    font-style: normal;
+    margin: 20px;
+    font-size: 20px;
+    /* background-image: url(https://ghea.org/wp-content/uploads/2021/09/hu-promo-bg-300x163.jpg);
+    background-size: cover; */
+}
+.healthscore{
+    font-size: 30px;
+}
+p{
+    color: #515151;
+    margin: 0;
+}
+h2{
+    margin: 10px;
 }
 
 .detailInfo p, h2{
     text-justify: distribute;
+}
+.buttonBack{
+    font-size: 40px;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 /* .allDetails{
@@ -27,17 +51,14 @@
     padding: 15px;
 } */
 
-.imgDetails{
+ .imgDetails{
     display: flex;
     align-items:center;
-    padding: 10px;
-    background-color: rgb(255, 198, 217);
-    border: solid rgb(255, 173, 173);
     box-shadow: 0 0 15px black;
     border-radius: 10px;
 }
 
-.divImgDetails img{
+/* .divImgDetails img{
     border-radius: 10px;
 }
 
@@ -45,4 +66,4 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
+}  */
