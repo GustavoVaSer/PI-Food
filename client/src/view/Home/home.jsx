@@ -15,15 +15,14 @@ function Home() {
   
      const diets = useSelector((state) => state.diets)
   
-     const [/* ordered */, setOrdered] = useState('')
+     const [setOrdered] = useState('')
   
       const [currentPage, setCurrentPage] = useState(1)
-      const [elementsPerPage, /* setElementsPerPage */] = useState(9)
+      const [elementsPerPage] = useState(9)
   
       const indexOfLastElement = currentPage * elementsPerPage
       const indexOfFirstElement = indexOfLastElement - elementsPerPage
       const filteredRecipes = allRecipes.slice(indexOfFirstElement, indexOfLastElement)
-      // const filteredRecipes = useSelector((state) => state.recipes);
   
       const paginationButtonNext = (e) => {
         e.preventDefault();
@@ -67,18 +66,11 @@ function Home() {
           setOrdered(`order ${e.target.value}`)
           console.log(healthScoreAsc());
         }
-  
-        // const handleGetBy = (e) =>{
-        //   e.preventDefault()
-        //   dispatch(getByApi(e.target.value))
-        //   setOrdered(`order ${e.target.value}`)
-        // }
+
   
     return (
         <div className={style.divHome}>
             <NavBar/>
-            {/* <div className={style.divButtonForm}> */}
-            {/* </div> */}
   
         <div className={style.allButtonsHome}>
         <select onChange={(e)=>handleDiets(e)} className={style.allDiets}>
@@ -92,27 +84,15 @@ function Home() {
             }
             </select>
             
-            {/* <div className={style.divOrderHome}> */}
                 <button className={style.buttonOrderHome} value='Asc' onClick={(e)=>handleSort(e)}>A-Z</button>
                 <button className={style.buttonOrderHome} value='Desc' onClick={(e)=>handleSort(e)}>Z-A</button>
-            {/* </div> */}
-            
-            {/* <div className={style.divSortHome}> */}
+
                 <button className={style.buttonSortHome} value='hsasc' onClick={(e)=>handleHs(e)}>Healthier</button>
                 <button className={style.buttonSortHome} value='hsdesc' onClick={(e)=>handleHs(e)}>Less Healthy</button>
-            {/* </div> */}
-    
-            {/* <div className={style.divFilterHome}>
-                <button className={style.buttonFilterHome} value='api' onClick={(e)=>handleGetBy(e)}>API</button>
-                <button className={style.buttonFilterHome} value='db' onClick={(e)=>handleGetBy(e)}>BD</button>
-            </div> */}
             <Link to='/form'><button className={style.buttonHomeForm}>New recipe</button></Link>
 
         </div>
       
-        {/* <div className={style.divSelectHome}>
-            
-        </div> */}
         <div className={style.boxPagination}>
             <div>
                 {currentPage === 1 ? ( <span></span> ) : ( <button className={style.divPrevButton} onClick={e => paginationButtonPrev(e)} >prev</button> )}

@@ -23,7 +23,7 @@ import { Link } from 'react-router-dom'
       return (
         
         <div className={style.divNav}>
-          <Link to='/'> <img className={style.imgNav}/></Link>
+          <Link to='/'> <img className={style.imgNav} /></Link>
           <div className={style.inputAndButtomSearch}>
             <input className={style.inputNav} type="text" name='search' value={recipeName.recipeValue} onChange={(e)=>handleSearch(e)} placeholder='Search..'/>
             <button className={style.buttonNav} onClick={onSearch}>Go</button>
