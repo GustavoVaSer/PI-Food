@@ -81,7 +81,7 @@ function Home() {
             {/* </div> */}
   
         <div className={style.allButtonsHome}>
-        <select onChange={(e)=>handleDiets(e)} className={style.buttonSortHome}>
+        <select onChange={(e)=>handleDiets(e)} className={style.allDiets}>
             <option value="All">All Diets</option>
             {
                 diets?.map((e, index) =>

@@ -50,16 +50,3 @@ module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
   conn: sequelize, // para importart la conexión { conn } = require('./db.js');
 };
-
-// async function syncDatabase() {
-//   try {
-//     // Sincroniza los modelos con la base de datos
-//     await sequelize.sync({ force: true });
-//     console.log("Tablas creadas exitosamente");
-//   } catch (error) {
-//     console.error("Error al sincronizar las tablas:", error);
-//   }
-// }
-
-// // Llama a la función para sincronizar las tablas
-// syncDatabase();

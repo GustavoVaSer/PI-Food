@@ -50,7 +50,7 @@ const reducer = (state = initialState, action) => {
     case CREATE_RECIPE:
       return {
         ...state,
-        recipes: /*[...state.recipes,*/ action.payload, // Agregar la nueva receta al array de recetas
+        recipes: action.payload, // Agregar la nueva receta al array de recetas
       };
     case ORDER:
       return {
