@@ -113,7 +113,7 @@ function Form() {
 
             </div>
                 <h2 className={style.h2Forms}>Choose your diets..</h2>
-            <div className={style.divmappingAndOthersForms}>
+            
                 <div className={style.divMappingDietsForms}>
                     {
                         diets.length >= 1 ? (
@@ -135,15 +135,14 @@ function Form() {
                     {error.diets && <span>{error.diets}</span>}
                 </div>
                 <div className={style.divButtonAndImgForms}>
-                    {/* <img src={gify} alt="gify osito" height= '150px'/> */}
 
                     {
                     newRecipe.name !== '' && newRecipe.summary !== '' && newRecipe.healthscore !== '' && newRecipe.image !== '' && newRecipe.image !== '' && newRecipe.diets.length >= 1
-                    ? <button className={style.buttonSubmitForm} type='submit' onClick={(e) => handleSubmit(e)}>Submit</button> 
-                    :<button disabled className={style.buttonSubmitForm}>Submit</button> 
+                    ? <button className={style.buttonSubmitForm} type='submit' onClick={(e) => handleSubmit(e)}>Create</button> 
+                    :<button disabled className={style.buttonSubmitForm}>Fill all camps</button> 
                     }
                 </div>
-            </div>
+            
 
         </div>
             <div className={style.divImgFormsToHome}> 

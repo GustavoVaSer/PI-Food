@@ -17,9 +17,9 @@
     font-size: 25px;
     text-align: center;
     color: #000;
-    font-family: 'Lato', sans-serif;
+    /* font-family: 'Lato', sans-serif;
     font-family: 'Wendy One', sans-serif;
-    font-weight: 400;
+    font-weight: 400; */
     -webkit-text-stroke: 0.05px #B5B5B5;
 }
 
@@ -28,8 +28,8 @@
     font-size: large;
     text-align: start;
     color: #515151;
-    font-family: 'Lato', sans-serif;
-    font-family: 'Wendy One', sans-serif;
+    /* font-family: 'Lato', sans-serif;
+    font-family: 'Wendy One', sans-serif; */
     /* -webkit-text-stroke: 0.05px #000; */
     text-align: center;
     font-weight: bolder;

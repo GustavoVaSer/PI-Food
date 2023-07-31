@@ -24,10 +24,10 @@
     margin-right: 20px;
 }
 
-.buttonNav:hover {
+/* .buttonNav:hover {
     background: #B5B5B5;;
     color: #fff;
-  }
+  } */
 
 .inputNav{
     margin-right: 10px;
@@ -41,6 +41,7 @@
 }
 .inputAndButtomSearch{
     display: flex;
+    flex-direction: row;
 }
  .imgNav{
     height: 50px;
@@ -50,4 +51,8 @@
     border-radius: 10px;
     margin-left: 20px;
     border: 5px solid black;
+}
+.imgNav:hover{
+    height: 60px;
+    width: 60px;
 }

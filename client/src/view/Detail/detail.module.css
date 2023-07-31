@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(https://img.freepik.com/fotos-premium/fondo-textura-piso-madera-dura_36078-963.jpg?w=900);
+    /* background-image: url(https://img.freepik.com/fotos-premium/fondo-textura-piso-madera-dura_36078-963.jpg?w=900); */
     background-size: cover;
 }
 .detailInfo{
@@ -15,8 +15,8 @@
     background-color: #b5b5b5d4;
     width: 75vh;
     box-shadow: 0 0 700px black;
-    font-family: Wendy One;
-    font-style: normal;
+    /* font-family: Wendy One;
+    font-style: normal; */
     margin: 20px;
     font-size: 20px;
     /* background-image: url(https://ghea.org/wp-content/uploads/2021/09/hu-promo-bg-300x163.jpg);
